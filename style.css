@@ -1,0 +1,16 @@
+img {
+    width: 150px;
+    height: auto;
+}
+
+img.active {
+    position: absolute;
+    top: 0;
+    left: calc(100vw/2 - ((100vh/2.16)/2));
+    height: 100vh !important;
+    width: auto;
+}
+
+.inactive {
+    visibility: hidden;    
+}
