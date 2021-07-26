@@ -1,6 +1,7 @@
 img {
     width: 150px;
     height: auto;
+    cursor: pointer;
 }
 
 img.active {
