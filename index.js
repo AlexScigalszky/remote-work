@@ -1,7 +1,10 @@
 var imgs = document.getElementsByTagName("img")
 function onClickImg(img) {
     img.classList.toggle('active');
-    console.log('img.src', img.src)
+    var footer = document.getElementsByTagName('footer')[0];
+    if (footer) {
+        footer.parentNode.removeChild(footer);
+    }
     for (let i = 0; i < imgs.length; i++) {
 
         const imgFE = imgs[i];
@@ -14,10 +17,8 @@ function onClickImg(img) {
 (() => {
     for (let i = 0; i < imgs.length; i++) {
         const img = imgs[i];
-        img.addEventListener("click", (event) =>
-            onClickImg(event.target)
+        img.addEventListener("click",
+            (event) => onClickImg(event.target)
         );
     }
-    console.log(imgs);
-
 })()

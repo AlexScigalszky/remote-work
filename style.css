@@ -1,5 +1,18 @@
+:root {
+    font-size: 16px;
+}
+
+body {
+    background-color: #477148;
+}
+#container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr));
+    gap: 1rem;
+}
+
 img {
-    width: 150px;
+    width: 200px;
     height: auto;
     cursor: pointer;
 }
@@ -13,5 +26,11 @@ img.active {
 }
 
 .inactive {
-    visibility: hidden;    
+    display: none;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
 }
