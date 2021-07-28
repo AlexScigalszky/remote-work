@@ -1,6 +1,7 @@
-var imgs = document.getElementsByTagName("img")
-function onClickImg(img) {
-    img.classList.toggle('active');
+var imgs = document.getElementsByClassName("seleccionable")
+function onClickImg(element) {
+    element.classList.toggle('active');
+
     var footer = document.getElementsByTagName('footer')[0];
     if (footer) {
         footer.parentNode.removeChild(footer);
@@ -8,7 +9,10 @@ function onClickImg(img) {
     for (let i = 0; i < imgs.length; i++) {
 
         const imgFE = imgs[i];
-        if (imgFE.src !== img.src) {
+
+        console.log(element.attributes['src']);
+
+        if (imgFE.src !== element.src) {
             imgFE.classList.toggle('inactive');
         }
     }

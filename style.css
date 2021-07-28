@@ -4,19 +4,32 @@
 }
 
 #container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr));
-    gap: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}   
+
+@media (min-width: 769px) {
+    #container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr));
+        gap: 1rem;
+    }
 }
 
-img {
-    width: 100%;
+.seleccionable {
+    width: 100px;
     height: auto;
     cursor: pointer;
     margin:auto;
 }
 
-img.active {
+@media (min-width: 769px) {
+    .seleccionable {
+        width: 100%;
+    }
+}
+
+.seleccionable.active {
     position: absolute;
     top: 0;
     left: calc(100vw/2 - ((100vh/2.16)/2));
@@ -29,7 +42,13 @@ img.active {
 }
 
 footer {
-    display: flex;
+    display: flex-row;
     justify-content: center;
     margin: 1rem;
+}
+
+@media (min-width: 769px) {
+    #container {
+        display: flex;
+    }
 }
