@@ -46,9 +46,3 @@ footer {
     justify-content: center;
     margin: 1rem;
 }
-
-@media (min-width: 769px) {
-    #container {
-        display: flex !important;
-    }
-}
