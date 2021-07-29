@@ -3,31 +3,30 @@
     background-color: #477148;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 #container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* grid-template-columns: repeat(auto-fit, minmax( 100px , 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
 }   
 
 @media (min-width: 769px) {
     #container {
-        display: grid !important;
-        grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr));
-        gap: 1rem;
+        gap: 2rem;
     }
 }
+
 
 
 .seleccionable {
-    width: 100px;
-    height: auto;
     cursor: pointer;
     margin:auto;
-}
-
-@media (min-width: 769px) {
-    .seleccionable {
-        width: 100% !important;
-    }
 }
 
 .seleccionable.active {
