@@ -16,6 +16,7 @@
     }
 }
 
+
 .seleccionable {
     width: 100px;
     height: auto;
@@ -23,13 +24,26 @@
     margin:auto;
 }
 
+@media (min-width: 769px) {
+    .seleccionable {
+        width: 100% !important;
+    }
+}
+
 .seleccionable.active {
     position: absolute;
     top: 0;
     left: calc(100vw/2 - ((100vh/2.16)/2));
-    height: 100vh !important;
+    height: 100vh;
     width: auto;
 }
+
+@media (min-width: 769px) {
+    .seleccionable.active {
+        width: auto !important;
+    }
+}
+
 
 .inactive {
     display: none;
