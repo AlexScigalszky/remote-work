@@ -23,12 +23,6 @@
     margin:auto;
 }
 
-@media (min-width: 769px) {
-    .seleccionable {
-        width: 100% !important;
-    }
-}
-
 .seleccionable.active {
     position: absolute;
     top: 0;
